@@ -15,7 +15,7 @@ def crear_video_response(request):
         
         # Aquí puedes usar 'data' para crear un nuevo objeto VideoResponse
         video_response = VideoResponse.objects.create(
-            matricula=data['matricula'],
+            matricule=data['matricule'],
             video_name=data['video_name'],
             response=data['response']
         )
