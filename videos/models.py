@@ -1,7 +1,7 @@
 from django.db import models
 
 class VideoResponse(models.Model):
-    user_id = models.BigIntegerField()
+    matricule = models.CharField(max_length=20)
     video_name = models.CharField(max_length=255)
     response = models.TextField()
 

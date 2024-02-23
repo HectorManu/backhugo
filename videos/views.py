@@ -15,7 +15,7 @@ def crear_video_response(request):
         
         # Aquí puedes usar 'data' para crear un nuevo objeto VideoResponse
         video_response = VideoResponse.objects.create(
-            user_id=data['user_id'],
+            matricula=data['matricula'],
             video_name=data['video_name'],
             response=data['response']
         )
@@ -52,7 +52,7 @@ def export_videos_to_excel(request):
     # Itera sobre los videos y respuestas para llenar las celdas, excluyendo 'ID'
     for row_num, video in enumerate(VideoResponse.objects.all(), start=2):
         row_data = [
-            video.user_id,
+            video.matricula,
             video.video_name,
             video.response,
         ]
