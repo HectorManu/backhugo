@@ -52,7 +52,7 @@ def export_videos_to_excel(request):
     # Itera sobre los videos y respuestas para llenar las celdas, excluyendo 'ID'
     for row_num, video in enumerate(VideoResponse.objects.all(), start=2):
         row_data = [
-            video.matricula,
+            video.matricule,
             video.video_name,
             video.response,
         ]
